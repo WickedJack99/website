@@ -1,7 +1,29 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.2">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2022-09-20T19:08:03+02:00</updated><id>/feed.xml</id><title type="html">Mr.</title><subtitle>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.</subtitle><entry><title type="html">How to create a static website with Jekyll and deploy it on GitHubPages</title><link href="/2022/09/20/jekyll_&_github.html" rel="alternate" type="text/html" title="How to create a static website with Jekyll and deploy it on GitHubPages" /><published>2022-09-20T00:00:00+02:00</published><updated>2022-09-20T00:00:00+02:00</updated><id>/2022/09/20/jekyll_&amp;_github</id><content type="html" xml:base="/2022/09/20/jekyll_&amp;_github.html">&lt;p&gt;Create a GitHub Account.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.2">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2022-09-20T19:44:36+02:00</updated><id>/feed.xml</id><title type="html">Mr.</title><subtitle>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.</subtitle><entry><title type="html">How to create a static website with Jekyll and deploy it on GitHubPages</title><link href="/2022/09/20/jekyll_&_github.html" rel="alternate" type="text/html" title="How to create a static website with Jekyll and deploy it on GitHubPages" /><published>2022-09-20T00:00:00+02:00</published><updated>2022-09-20T00:00:00+02:00</updated><id>/2022/09/20/jekyll_&amp;_github</id><content type="html" xml:base="/2022/09/20/jekyll_&amp;_github.html">&lt;p&gt;Create a GitHub-account: https://github.com/&lt;/p&gt;
+
+&lt;p&gt;Create a repository on GitHub: https://github.com/
+(It has to be public if you use GitHub Free, note that your code will be visible to everyone!)&lt;/p&gt;
+
+&lt;p&gt;Clone the repository to a local directory:&lt;/p&gt;
+
+&lt;p&gt;SSH&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;$ git clone –recursive $SSH_URL&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;HTTPS&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;$ git -c http.sslVerify=false clone –recursive $HTTPS_URL&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Create two directories: docs and localDev.&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;$ mkdir docs&lt;/p&gt;
+
+  &lt;p&gt;$ mkdir localDev&lt;/p&gt;
+&lt;/blockquote&gt;
 
 &lt;p&gt;Follow instructions on: https://docs.github.com/en/pages/setting-up-a-github-pages-site-with-jekyll/creating-a-github-pages-site-with-jekyll&lt;/p&gt;
 
 &lt;p&gt;Deploy: https://jekyllrb.com/docs/step-by-step/10-deployment/&lt;/p&gt;
 
-&lt;p&gt;JEKYLL_ENV=production bundle exec jekyll build&lt;/p&gt;</content><author><name>jill</name></author><summary type="html">Create a GitHub Account.</summary></entry></feed>
+&lt;p&gt;JEKYLL_ENV=production bundle exec jekyll build&lt;/p&gt;</content><author><name>Aaron</name></author><summary type="html">Create a GitHub-account: https://github.com/</summary></entry></feed>

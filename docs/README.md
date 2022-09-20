@@ -1,10 +1,15 @@
-https://jekyllrb.com/
+This is my first approach to a website which is deployed to GitHub Pages.
 
-https://jekyllrb.com/docs/liquid/tags/
-https://jekyllrb.com/docs/variables/
+I use Jekyll for some nice building tricks.
 
-"jekyll serve" to open local server for debugging
+> https://jekyllrb.com/
 
-Visit Page:
+Things for me to check out:
+
+> https://jekyllrb.com/docs/liquid/tags/
+> 
+> https://jekyllrb.com/docs/variables/
+
+Visit Page: (Will make a guide how I did the setup of the webpage)
 
 https://wickedjack99.github.io/website/
