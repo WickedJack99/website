@@ -76,8 +76,9 @@
         <i>gem "github-pages", "~> GITHUB-PAGES-VERSION", group: :jekyll_plugins</i><br>
         You can find the actual version of GitHub-pages <a href="https://rubygems.org/gems/github-pages" target="_blank">here</a>.<br>
         Now save and close the Gemfile.<br>
-        <br>
-
+    </div>
+    <div>
+        <h3>Install bundle</h3>
         Now still being at the localDev-directory, install the bundle:<br>
         <div class="console">
             <code>$ bundle install</code><br>            
@@ -98,9 +99,13 @@
             <code>$ JEKYLL_ENV=production bundle exec jekyll build</code>
         </div>
         Your Jekyll-project was now build and stored at _site.<br>
+        Clear your docs-directory:
+        <div class="console">
+            <code>$ rm -r ../docs/*</code>
+        </div>
         Now move the content of the localDev/_site to docs:<br>
         <div class="console">
-            <code>$ cp -r _site/* ../docs</code><br>
+            <code>$ cp -r _site/* ../docs</code>
         </div>
         And push your changes to your central GitHub-Repository.
     </div>
