@@ -52,9 +52,8 @@ title: 2022 Week 38 How to create a static website with Jekyll and deploy it on 
         Create a new Jekyll-project at localDev-directory:<br>
         <div class="console">
             <code>$ jekyll new --skip-bundle .</code><br>
-            (make sure you got the dot)
         </div>
-        <br>
+        (make sure you got the dot)<br>
         
         Open the Gemfile that Jekyll created and comment out the line which starts with <i>gem "jekyll"</i><br>
         Add the github-pages gem by editing the line starting with # gem "github-pages".<br>
@@ -65,7 +64,7 @@ title: 2022 Week 38 How to create a static website with Jekyll and deploy it on 
         <br>
 
         Now still being at the localDev-directory, install the bundle:<br>
-        <div>
+        <div class="console">
             <code>$ bundle install</code><br>            
         </div>
         Optionally you can make changes at the <i>_config.yml</i> file.<br>
@@ -79,11 +78,13 @@ title: 2022 Week 38 How to create a static website with Jekyll and deploy it on 
         <h3>Build Project</h3>
         After creating all necessary files and dirs, you can make a production build:<br>
         Note that all files at _site will be cleared!
-        <code>$ JEKYLL_ENV=production bundle exec jekyll build</code><br>            
+        <div class="console">
+            <code>$ JEKYLL_ENV=production bundle exec jekyll build</code>
+        </div>
         Your Jekyll-project was now build and stored at _site.<br>
         Now move the content of the localDev/_site to docs:<br>
-        <div>
-            <code>$ mv /localDev/_site docs</code><br>
+        <div class="console">
+            <code>$ cp -r _site/* ../docs</code><br>
         </div>
         And push your changes to your central GitHub-Repository.
     </div>
