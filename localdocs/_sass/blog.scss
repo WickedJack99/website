@@ -1,11 +1,12 @@
 body {
     background-color: #121212;
-    color: snow;
+    opacity: 0.10;
+    color: white;
 }
 
 div.console {
     background-color: darkslategrey;
-    color: snow;
+    color: white;
     padding-left: 10px;
     padding-top: 10px;
     padding-bottom: 10px;
@@ -21,4 +22,5 @@ div.outerDiv {
 
 a {
     color: lightseagreen;
+    text-decoration: none;
 }
