@@ -99,27 +99,71 @@ title: How to create a static website with Jekyll and deploy it on GitHubPages
                 $ bundle install<br>
             </pre>
         </div>
-        Optionally you can make changes at the <b>_config.yml</b> file.
+        Optionally you can make changes at the <b>_config.yml</b> file.<br>
     </p>
 </section>
 
 <section>
     <p>
-        Optionally you can create <b>another branch</b> called gh-pages from where GitHub Pages will take the website-files.<br>
+        Follow <a href="https://jekyllrb.com/docs/step-by-step/01-setup/#create-a-site" target="_blank">this</a> guide to learn Jekyll. Make sure that all files and directories you create are in the localDev-directory.<br>
+        Note that building locally will not work according to commenting out gem "Jekyll" at the Gemfile. (Atm I didn't check if you can let it in and bundle install to allow local building)<br>
+    </p>
+</section>
+
+<section>
+    <p>
+        After creating all necessary files and dirs, you can make a production build:<br>
+        Note that all files at _site will be cleared!
         <div>
             <pre>
-                $ git checkout -b gh-pages<br>
+                $ JEKYLL_ENV=production bundle exec jekyll build<br>
+            </pre>
+        </div>
+        Your Jekyll-project was now build and stored at _site.<br>
+        Now move the content of the localDev/_site to docs:<br>
+        <div>
+            <pre>
+                $ mv /localDev/_site docs<br>
+            </pre>
+        </div>
+        And push your changes to your central GitHub-Repository:<br>
+        <div>
+            <pre>
+
             </pre>
         </div>
     </p>
 </section>
 
 <section>
-    Follow instructions on: https://docs.github.com/en/pages/setting-up-a-github-pages-site-with-jekyll/creating-a-github-pages-site-with-jekyll<br>
-    Deploy: https://jekyllrb.com/docs/step-by-step/10-deployment/<br>
-    JEKYLL_ENV=production bundle exec jekyll build
-    https://jekyllrb.com/docs/step-by-step/01-setup/
-    https://jekyllrb.com/docs/structure/
+    <p>
+        Now <a href="https://github.com/WickedJack99/website/settings/pages" target="_blank">publish your repository on GitHub Pages</a>.<br>
+        Select your <b>branch</b> and as <b>folder /docs</b> and hit Save.<br>
+        Now you have to wait, this can take up to 10 minutes.<br>
+        On the top of the page a box will appear with the url of your website.<br>
+    </p>
+    <h3>Happy developing!</h3>
+</section>
+
+<section>
+    <p>
+        Sources:<br>
+        <ul>
+            <li><a href="https://docs.github.com/en/pages/setting-up-a-github-pages-site-with-jekyll/creating-a-github-pages-site-with-jekyll" target="_blank">https://docs.github.com/en/pages/setting-up-a-github-pages-site-with-jekyll/creating-a-github-pages-site-with-jekyll</a></li>
+            <li><a href="" target="_blank"></a></li>
+            <li><a href="" target="_blank"></a></li>
+            <li><a href="" target="_blank"></a></li>
+            <li><a href="" target="_blank"></a></li>
+            <li><a href="" target="_blank"></a></li>
+            <li><a href="" target="_blank"></a></li>
+            <li><a href="https://jekyllrb.com/docs/structure/" target="_blank">https://jekyllrb.com/docs/structure/</a></li>
+            <li><a href="https://jekyllrb.com/docs/step-by-step/01-setup/" target="_blank">https://jekyllrb.com/docs/step-by-step/01-setup/</a></li>
+            <li><a href="https://jekyllrb.com/docs/step-by-step/10-deployment/" target="_blank">https://jekyllrb.com/docs/step-by-step/10-deployment/</a></li>
+        </ul>
+    </p>
+    
+    
+    
     https://docs.github.com/en/pages/setting-up-a-github-pages-site-with-jekyll/testing-your-github-pages-site-locally-with-jekyll
     https://docs.github.com/en/pages/setting-up-a-github-pages-site-with-jekyll/creating-a-github-pages-site-with-jekyll
     https://docs.github.com/en/get-started/quickstart/set-up-git
