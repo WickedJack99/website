@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <title>2022-09-20 How to create a static website with Jekyll and deploy it on GitHubPages</title>
+        <title>2022 Week 38 How to create a static website with Jekyll and deploy it on GitHubPages</title>
         <link rel="stylesheet" href="/assets/css/styles.css">
     </head>
     <body>
@@ -15,105 +15,115 @@
         <a href="/website/blog.html" >Blog</a>
     
 </nav>
-        <h1>2022-09-20 How to create a static website with Jekyll and deploy it on GitHubPages</h1>
+        <h1>2022 Week 38 How to create a static website with Jekyll and deploy it on GitHubPages</h1>
 <p>20 Sep 2022 - Aaron</p>
 
-<section>
-    <p>Install <a href="https://git-scm.com/downloads" target="_blank">Git</a></p><br>
-    <p>Install <a href="https://www.ruby-lang.org/en/documentation/installation/" target="_blank">Ruby</a></p><br>
-    <p>
+<div>
+    <div id="prerequisits">
+        <h3>Prerequisits</h3>
+        Install <a href="https://git-scm.com/downloads" target="_blank">Git</a>
+        Install <a href="https://www.ruby-lang.org/en/documentation/installation/" target="_blank">Ruby</a>
         Install Jekyll and Bundler<br>
-        <code>$ gem install jekyll bundler</code><br>
-    </p>
-    <p>
+        <div class="console">
+            <code>$ gem install jekyll bundler</code>
+        </div>
+    </div>
+    <div id="github">
+        <h3>GitHub</h3>
         Create a <a href="https://github.com/" target="_blank">GitHub-account</a><br>
         Create a <a href="https://github.com/new" target="_blank">repository on GitHub</a><br>
         (It has to be public if you use GitHub Free, note that your code will be visible to everyone!)<br>
-    </p>
-    <p>
+    </div>
+    <div id="repository">
+        <h3>Local Repository</h3>
         Clone the repository to a local directory:<br>
         <i>SSH</i><br>
-        <code>$ git clone --recursive SSH_URL</code><br>
+        <div class="console">
+            <code>$ git clone --recursive SSH_URL</code>
+        </div>
         <i>HTTPS</i><br>
-        <code>$ git -c http.sslVerify=false clone --recursive HTTPS_URL</code><br>
-    </p>
-    <p>
-        Create two directories: docs and localDev.<br>
-        <div>
-            <code>$ mkdir docs</code><br>
-            <code>$ mkdir localDev</code><br>
+        <div class="console">
+            <code>$ git -c http.sslVerify=false clone --recursive HTTPS_URL</code>
+        </div>
+    </div>
+    <div id="directories">
+        <h3>Directories</h3>
+        Create two directories: docs and localDev.
+        <div class="console">
+            <code>$ mkdir docs</code>
+            <code>$ mkdir localDev</code>
         </div>
         docs will contain the content of the website later on.<br>
         localDev will contain our Jekyll project.<br>
-    </p>
-    <p>
+    </div>
+    <div id="createJekyllProject">
+        <h3>Create Jekyll Project</h3>
         Move to the localDev-directory:<br>
-        <div>
-            <code>$ cd localDev</code><br>
+        <div class="console">
+            <code>$ cd localDev</code>
         </div>
-    </p>
-    <p>
+        <br>
         Create a new Jekyll-project at localDev-directory:<br>
-        <div>
+        <div class="console">
             <code>$ jekyll new --skip-bundle .</code><br>
-            (make sure you got the dot)<br>
+            (make sure you got the dot)
         </div>
-    </p>
-    <p>
+        <br>
+        
         Open the Gemfile that Jekyll created and comment out the line which starts with <i>gem "jekyll"</i><br>
         Add the github-pages gem by editing the line starting with # gem "github-pages".<br>
         Change this line (# gem "github-pages") to:<br>
         <i>gem "github-pages", "~> GITHUB-PAGES-VERSION", group: :jekyll_plugins</i><br>
         You can find the actual version of GitHub-pages <a href="https://rubygems.org/gems/github-pages" target="_blank">here</a><br>.
         Now save and close the Gemfile.<br>
-    </p>
-    <p>
+        <br>
+
         Now still being at the localDev-directory, install the bundle:<br>
         <div>
             <code>$ bundle install</code><br>            
         </div>
         Optionally you can make changes at the <i>_config.yml</i> file.<br>
-    </p>
-    <p>
+    </div>
+    <div id="learnJekyll">
+        <h3>Learn Jekyll</h3>
         Follow <a href="https://jekyllrb.com/docs/step-by-step/01-setup/#create-a-site" target="_blank">this</a> guide to learn Jekyll. Make sure that all files and directories you create are in the localDev-directory.<br>
-        Note that building locally will not work according to commenting out gem "Jekyll" at the Gemfile. (Atm I didn't check if you can let it in and bundle install to allow local building)<br>
-    </p>
-    <p>
+        Note that building locally will not work according to commenting out gem "Jekyll" at the Gemfile. (Atm I didn't check if this is right)<br>
+    </div>
+    <div id="buildProject">
+        <h3>Build Project</h3>
         After creating all necessary files and dirs, you can make a production build:<br>
         Note that all files at _site will be cleared!
-        <div>
-            <code>$ JEKYLL_ENV=production bundle exec jekyll build</code><br>            
-        </div>
+        <code>$ JEKYLL_ENV=production bundle exec jekyll build</code><br>            
         Your Jekyll-project was now build and stored at _site.<br>
         Now move the content of the localDev/_site to docs:<br>
         <div>
             <code>$ mv /localDev/_site docs</code><br>
         </div>
-        And push your changes to your central GitHub-Repository.<br>
-    </p>
-    <p>
+        And push your changes to your central GitHub-Repository.
+    </div>
+    <div id="publishWebsite">
+        <h3>Publish Website</h3>
         Now <a href="https://github.com/WickedJack99/website/settings/pages" target="_blank">publish your repository on GitHub Pages</a>.<br>
         Select your <i>branch</i> and as <i>folder /docs</i> and hit Save.<br>
         Now you have to wait, this can take up to 10 minutes.<br>
-        On the top of the page a box will appear with the url of your website.<br>
-    </p>
-    <h3>Happy developing!</h3>
-    <p id="sources">
-        Sources:<br>
+        On the top of the page a box will appear with the url of your website.
+    </div>
+    <div>
+        <h3>Happy developing!</h3>
+    </div>
+    <div id="sources">
+        <h3>Sources</h3>
         <ul>
             <li><a href="https://docs.github.com/en/pages/setting-up-a-github-pages-site-with-jekyll/creating-a-github-pages-site-with-jekyll" target="_blank">https://docs.github.com/en/pages/setting-up-a-github-pages-site-with-jekyll/creating-a-github-pages-site-with-jekyll</a></li>
             <li><a href="https://docs.github.com/en/pages/quickstart" target="_blank">https://docs.github.com/en/pages/quickstart</a></li>
             <li><a href="https://docs.github.com/en/get-started/quickstart/set-up-git" target="_blank">https://docs.github.com/en/get-started/quickstart/set-up-git</a></li>
             <li><a href="https://docs.github.com/en/pages/setting-up-a-github-pages-site-with-jekyll/testing-your-github-pages-site-locally-with-jekyll" target="_blank">https://docs.github.com/en/pages/setting-up-a-github-pages-site-with-jekyll/testing-your-github-pages-site-locally-with-jekyll</a></li>
-            <li><a href="" target="_blank"></a></li>
-            <li><a href="" target="_blank"></a></li>
-            <li><a href="" target="_blank"></a></li>
             <li><a href="https://jekyllrb.com/docs/structure/" target="_blank">https://jekyllrb.com/docs/structure/</a></li>
             <li><a href="https://jekyllrb.com/docs/step-by-step/01-setup/" target="_blank">https://jekyllrb.com/docs/step-by-step/01-setup/</a></li>
             <li><a href="https://jekyllrb.com/docs/step-by-step/10-deployment/" target="_blank">https://jekyllrb.com/docs/step-by-step/10-deployment/</a></li>
         </ul>
-    </p>
-</section>
+    </div>
+</div>
         <nav>
     
         <a href="/website/terms.html" >Terms</a>
