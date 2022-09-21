@@ -1,0 +1,8 @@
+- name: Terms
+  link: /website/terms.html
+- name: Privacy
+  link: /website/privacy.html
+- name: Blog
+  link: /website/blog.html
+- name: Imprint
+  link: /website/imprint.html
