@@ -1,5 +1,5 @@
-<div id="navbarBottom" class="w3-bar w3-black"> | 
+<div id="navbarBottom" class="w3-bar w3-black">
     {% for item in site.data.footerNavbar %}
-        <a href="{{ item.link }}" {% if page.url == item.link %} class="current" {% endif %} class="w3-bar-item w3-button">{{ item.name }}</a> | 
+        <a href="{{ item.link }}" {% if page.url == item.link %} class="current" {% endif %} class="w3-bar-item w3-button">{{ item.name }}</a>
     {% endfor %}
 </div>
