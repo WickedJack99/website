@@ -1,4 +1,4 @@
-<div id="navbarTop" class="w3-bar w3-black">
+<div id="navbarTop" class="w3-bar w3-top w3-black">
     {% for item in site.data.navigation %}
         <a href="{{ item.link }}" {% if page.url == item.link %} class="current" {% endif %} class="w3-bar-item w3-button">{{ item.name }}</a>
     {% endfor %}
