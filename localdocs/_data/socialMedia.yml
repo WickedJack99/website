@@ -1,12 +1,12 @@
 - name: GitHub
   link: https://github.com/WickedJack99
-  icon: <i class='fa fa-github' style='color:#20b2aa'></i>
+  icon: <i class='fa fa-github' style='color:#ffffff'></i>
 - name: LinkedIn
   link: https://www.linkedin.com/in/aaron-moser-027b30213/
-  icon: <i class='fa fa-linkedin' style='color:#20b2aa'></i>
+  icon: <i class='fa fa-linkedin' style='color:#ffffff'></i>
 - name: YouTube
   link: https://www.youtube.com/channel/UCrplqbwwjjfGKXinuokR1HQ/featured
-  icon: <i class='fa fa-youtube' style='color:#20b2aa'></i>
+  icon: <i class='fa fa-youtube' style='color:#ffffff'></i>
 - name: eMail
   link: amoser@stud.hs-offenburg.de
-  icon: <i class='fa fa-envelope' style='color:#20b2aa'></i>
+  icon: <i class='fa fa-envelope' style='color:#ffffff'></i>
