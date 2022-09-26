@@ -1,10 +1,10 @@
 <div id="navbarTop" class="w3-bar w3-top w3-black">
     {% for item in site.data.navigation %}
-        <a href="{{ item.link }}" {% if page.url == item.link %} class="current" {% endif %} class="w3-bar-item w3-button w3-hover-#000000">{{ item.name }}</a>
+        <a href="{{ item.link }}" {% if page.url == item.link %} class="current" {% endif %} class="w3-bar-item w3-button w3-hover-lightseagreen">{{ item.name }}</a>
     {% endfor %}
-    <input class="w3-bar-item w3-input w3-right" type="text" placeholder="Search..">
-    <button class="w3-bar-item w3-button w3-right" type="submit"><i class="fa fa-search"></i></button>
     {% for item in site.data.socialMedia %}
         <a href="{{ item.link }}" {% if page.url == item.link %} class="current" {% endif %} class="w3-bar-item w3-button w3-right">{{ item.icon }}</a>
     {% endfor %}
+    <button class="w3-bar-item w3-button w3-right" type="submit"><i class="fa fa-search"></i></button>
+    <input class="w3-bar-item w3-input w3-right" type="text" placeholder="Search..">
 </div>
