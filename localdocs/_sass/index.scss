@@ -16,7 +16,11 @@ body {
 
 #image00 {
     background-color: black;
-    margin: auto;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    z-index: -1;
+    
 }
 
 a {
