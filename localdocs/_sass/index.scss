@@ -16,8 +16,8 @@ body {
 }
 
 #div00 {
-    width: 960px;
-    height: 480px;
+    min-width: 960px;
+    min-height: 480px;
     position: absolute;
     text-align: center;
     background-position: center;
