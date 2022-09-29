@@ -15,6 +15,11 @@ body {
     align-content: center;
 }
 
+#divMain {
+    display: flex;
+    justify-content: center;
+}
+
 #div00 {
     min-width: 960px;
     min-height: 480px;
