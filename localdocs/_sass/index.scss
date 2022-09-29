@@ -15,15 +15,13 @@ body {
     align-items: center;
 }
 
-#image00 {
-    background-color: black;
-    position: relative;
-    z-index: -1;
-}
-
 #div00 {
     position: absolute;
-    align-content: center;
+    text-align: center;
+    background-position: center;
+    background-image: url(https://cdn.pixabay.com/photo/2012/01/09/09/59/earth-11595_960_720.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 a {
