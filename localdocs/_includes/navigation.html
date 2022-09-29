@@ -3,7 +3,7 @@
         <a href="{{ item.link }}" {% if page.url == item.link %} class="current" {% endif %} class="w3-bar-item w3-button">{{ item.name }}</a>
     {% endfor %}
     {% for item in site.data.socialMedia %}
-        <a href="{{ item.link }}" {% if page.url == item.link %} class="current" {% endif %} class="w3-bar-item w3-button w3-right">{{ item.icon }}</a>
+        <a href="{{ item.link }}" target="_blank" {% if page.url == item.link %} class="current" {% endif %} class="w3-bar-item w3-button w3-right">{{ item.icon }}</a>
     {% endfor %}
     {% for item in site.data.eMail %}
         <a href="mailto: {{ item.link }}" {% if page.url == item.link %} class="current" {% endif %} class="w3-bar-item w3-button w3-right">{{ item.icon }}</a>
