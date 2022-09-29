@@ -7,6 +7,3 @@
 - name: YouTube
   link: https://www.youtube.com/channel/UCrplqbwwjjfGKXinuokR1HQ/featured
   icon: <i class='fa fa-youtube' style='color:#ffffff'></i>
-- name: eMail
-  link: amoser@stud.hs-offenburg.de
-  icon: <i class='fa fa-envelope' style='color:#ffffff'></i>
